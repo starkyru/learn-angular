@@ -21,17 +21,13 @@ export interface Todo {
 @Component({
   selector: 'app-todo-list',
   template: `
-    @if (todos().length > 0) {
-      <ul>
-        @for (todo of todos(); track todo.id) {
+    <ul>
+      @for (todo of todos(); track todo.id) {
           <li [class.done]="todo.done">{{ todo.title }}</li>
-        } @empty {
-          <li class="empty">nothing here</li>
-        }
-      </ul>
-    } @else {
-      <p class="empty">Nothing to do 🎉</p>
-    }
+      } @empty {
+        <li class="empty">Nothing to do 🎉</li>
+      }
+    </ul>
 
     <p class="summary">
       @switch (status()) {

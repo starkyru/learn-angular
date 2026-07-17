@@ -1,16 +1,15 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterLink, RouterOutlet],
   template: `
-    <h1>Hello, {{ title() }}</h1>
-
+    <header class="site-header">
+      <a routerLink="/" class="wordmark" aria-label="Learn Angular home">Learn Angular</a>
+      <span>Interview prep, one executable idea at a time</span>
+    </header>
     <router-outlet />
   `,
-  styles: [],
 })
-export class App {
-  protected readonly title = signal('learn-angular');
-}
+export class App {}

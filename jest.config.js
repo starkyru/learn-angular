@@ -7,4 +7,6 @@ const { createCjsPreset } = require('jest-preset-angular/presets');
 module.exports = {
   ...createCjsPreset({ tsconfig: '<rootDir>/tsconfig.spec.json' }),
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
+  // Watchman is optional and unavailable in many containers and CI environments.
+  watchman: false,
 };

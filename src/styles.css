@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+:root { color-scheme: light; font-family: ui-sans-serif, system-ui, sans-serif; color: #17231f; background: #f7f5ef; }
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.55; }
+a { color: inherit; }
+.site-header, main, .intro, .lesson-list, .back { width: min(100% - 2rem, 68rem); margin-inline: auto; }
+.site-header { display: flex; justify-content: space-between; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid #d8ddd4; font-size: .9rem; }
+.wordmark { font-weight: 750; text-decoration: none; }
+.intro { padding: clamp(3rem, 8vw, 7rem) 0 2rem; max-width: 52rem; }
+h1 { font-size: clamp(2.3rem, 7vw, 5.4rem); line-height: .98; letter-spacing: -.05em; margin: .35rem 0 1rem; }
+h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: .08em; }
+.eyebrow, .lesson-number { color: #176b5b; font-size: .78rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.lesson-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: .7rem; padding-bottom: 3rem; }
+.lesson-list a { display: flex; gap: .9rem; padding: 1rem; border: 1px solid #d8ddd4; text-decoration: none; background: #fcfbf7; }
+.lesson-list a:hover, .lesson-list a:focus-visible { border-color: #176b5b; outline: 3px solid transparent; background: #edf5f1; }
+.lesson-list small { display: block; color: #52625b; }
+.back { display: block; padding-top: 2rem; color: #176b5b; }
+main { padding-bottom: 4rem; }
+.demo { margin-top: 2.5rem; padding: clamp(1.25rem, 4vw, 2.5rem); border-left: .35rem solid #176b5b; background: #edf5f1; }
+button, input { font: inherit; }
+button { min-height: 2.75rem; margin: .25rem; padding: .35rem .8rem; color: #fff; background: #176b5b; border: 1px solid #176b5b; cursor: pointer; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #b55d32; outline-offset: 2px; }
+label, input { display: block; margin-top: .6rem; }
+input { min-height: 2.75rem; width: min(100%, 26rem); padding: .4rem .6rem; border: 1px solid #52625b; }
+@media (max-width: 38rem) { .site-header { align-items: flex-start; flex-direction: column; } }

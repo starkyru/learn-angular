@@ -6,12 +6,12 @@ describe('TodoListComponent', () => {
     TestBed.configureTestingModule({ imports: [TodoListComponent] });
   });
 
-  it('shows the @else empty state when there are no todos', async () => {
+  it('shows the @empty state when there are no todos', async () => {
     const fixture = TestBed.createComponent(TodoListComponent);
     await fixture.whenStable();
     const el = fixture.nativeElement as HTMLElement;
 
-    expect(el.querySelector('ul')).toBeNull();
+    expect(el.querySelector('ul')).not.toBeNull();
     expect(el.querySelector('.empty')!.textContent).toContain('Nothing to do');
     expect(el.querySelector('.summary')!.textContent?.trim()).toBe('Add your first todo');
   });

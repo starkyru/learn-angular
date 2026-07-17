@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
 
 /** A collaborator we can spy on in tests. */
 export class NotifierService {
@@ -22,13 +22,15 @@ export class NotifierService {
 })
 export class DelayedComponent {
   private readonly notifier = inject(NotifierService);
+  private readonly destroyRef = inject(DestroyRef);
   readonly status = signal('idle');
 
   schedule(): void {
     this.status.set('pending');
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       this.status.set('done');
       this.notifier.notify('done');
     }, 1000);
+    this.destroyRef.onDestroy(() => clearTimeout(timer));
   }
 }

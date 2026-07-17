@@ -24,7 +24,7 @@ npm install
 npm test              # run every lesson's specs
 npm test -- 08-signals   # run one lesson (path filter)
 npm run test:watch    # watch mode
-npm start             # ng serve the shell app at http://localhost:4200
+npm start             # ng serve the lesson browser at http://localhost:4200
 ```
 
 > Tests run with `npm test` (Jest). This workspace was converted from the CLI's default
@@ -74,13 +74,16 @@ matching assertion — the fastest way to make the concept stick).
 | 14 | [change-detection](src/app/14-change-detection) | OnPush, zoneless vs zone.js, `markForCheck`, signal interplay |
 | 15 | [content-projection](src/app/15-content-projection) | `<ng-content>` slots, fallback, `ng-template`/`ngTemplateOutlet` |
 | 16 | [testing-patterns](src/app/16-testing-patterns) | `TestBed`, `By.css`, spies, Jest fake timers (zoneless) |
+| 17 | [view-queries](src/app/17-view-queries) | `viewChild()`, `ViewContainerRef`, dynamic components |
+| 18 | [state-store](src/app/18-state-store) | signal store service, `linkedSignal`, `resource()` |
 
-### Roadmap (next — great as your own exercises)
-| # | Lesson | Concepts |
-| --- | --- | --- |
-| 17 | view-queries | `viewChild()` / `contentChild()`, `ViewContainerRef`, dynamic components |
-| 18 | state-store | signal-based store service, `linkedSignal`, `resource()` |
+### Next areas to explore
+
+- Server rendering and hydration: browser-only APIs, `afterNextRender`, transfer state.
+- Deferred templates and async UX: `@defer`, loading, error, and empty states.
+- Production concerns: i18n, sanitization boundaries, accessibility automation, and route/HTTP
+  integration tests.
 
 ## Status
 
-16 lessons, 60 passing specs. Run `npm test` to verify.
+18 lessons, 65 passing specs. Run `npm test` to verify.

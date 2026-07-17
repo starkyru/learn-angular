@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { By } from '@angular/platform-browser';
 import { App } from './app';
 import { RouterOutlet } from '@angular/router';
@@ -7,6 +8,7 @@ describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
+      providers: [provideRouter([])],
     }).compileComponents();
   });
 
@@ -18,10 +20,10 @@ describe('App', () => {
     expect(fixture.debugElement.query(By.directive(RouterOutlet))).not.toBeNull();
   });
 
-  it('should render title', async () => {
+  it('renders a link back to the course home', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, learn-angular');
+    expect(compiled.querySelector('.wordmark')?.textContent).toContain('Learn Angular');
   });
 });

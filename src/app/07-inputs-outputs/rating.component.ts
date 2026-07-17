@@ -15,10 +15,10 @@ import { ChangeDetectionStrategy, Component, computed, input, model, output } fr
   selector: 'app-rating',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <span class="label">{{ label() }}: {{ stars() }}/{{ max() }}</span>
+    <span class="label" id="rating-label">{{ label() }}: {{ stars() }}/{{ max() }}</span>
     <span class="full">{{ full() ? 'maxed' : 'room to grow' }}</span>
-    <button type="button" class="up" (click)="up()">▲</button>
-    <button type="button" class="down" (click)="down()">▼</button>
+    <button type="button" class="up" (click)="up()" aria-label="Increase rating">▲</button>
+    <button type="button" class="down" (click)="down()" aria-label="Decrease rating">▼</button>
   `,
 })
 export class RatingComponent {

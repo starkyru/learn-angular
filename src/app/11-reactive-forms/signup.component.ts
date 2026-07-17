@@ -29,12 +29,24 @@ export function forbiddenNameValidator(control: AbstractControl): ValidationErro
   selector: 'app-signup',
   imports: [ReactiveFormsModule],
   template: `
-    <form [formGroup]="form">
-      <input formControlName="username" />
-      <input formControlName="email" />
-      <input formControlName="age" type="number" />
+    <form [formGroup]="form" novalidate>
+      <label for="username">Username</label>
+      <input id="username" formControlName="username" aria-describedby="username-error" />
+      @if (form.controls.username.invalid && form.controls.username.touched) {
+        <p id="username-error" role="alert">Use at least 3 characters; “admin” is reserved.</p>
+      }
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email" aria-describedby="email-error" />
+      @if (form.controls.email.invalid && form.controls.email.touched) {
+        <p id="email-error" role="alert">Enter a valid email address.</p>
+      }
+      <label for="age">Age</label>
+      <input id="age" formControlName="age" type="number" min="18" aria-describedby="age-error" />
+      @if (form.controls.age.invalid && form.controls.age.touched) {
+        <p id="age-error" role="alert">You must be at least 18.</p>
+      }
     </form>
-    <p class="status">{{ form.valid ? 'valid' : 'invalid' }}</p>
+    <p class="status" aria-live="polite">{{ form.valid ? 'valid' : 'invalid' }}</p>
   `,
 })
 export class SignupComponent {
