@@ -16,6 +16,7 @@ import { ChangeDetectionStrategy, Component, computed, input, model, output } fr
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <span class="label">{{ label() }}: {{ stars() }}/{{ max() }}</span>
+    <span class="full">{{ full() ? 'maxed' : 'room to grow' }}</span>
     <button type="button" class="up" (click)="up()">▲</button>
     <button type="button" class="down" (click)="down()">▼</button>
   `,

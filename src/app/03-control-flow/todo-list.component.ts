@@ -45,6 +45,10 @@ export interface Todo {
 export class TodoListComponent {
   readonly todos = signal<Todo[]>([]);
 
+  // Monotonic id source. Deriving ids from `list.length + 1` looks fine until you
+  // remove an item — then lengths repeat and ids collide. Always mint stable ids.
+  private nextId = 1;
+
   remaining(): number {
     return this.todos().filter((t) => !t.done).length;
   }
@@ -56,7 +60,7 @@ export class TodoListComponent {
   }
 
   add(title: string): void {
-    this.todos.update((list) => [...list, { id: list.length + 1, title, done: false }]);
+    this.todos.update((list) => [...list, { id: this.nextId++, title, done: false }]);
   }
 
   toggle(id: number): void {

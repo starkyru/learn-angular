@@ -33,11 +33,16 @@ export class CartComponent {
   readonly total = computed(() => this.prices().reduce((sum, p) => sum + p, 0));
   readonly pricey = computed(() => this.total() > 100);
 
-  /** Teaching hook: records every value `total` ever took. */
+  /**
+   * Teaching hook: records `total` at each change-detection flush.
+   * NOTE: effects COALESCE — several synchronous writes before the next flush
+   * produce ONE run with the latest value, so intermediate values are dropped
+   * (e.g. two synchronous `add()`s record only the final total, not both).
+   */
   readonly totalHistory: number[] = [];
 
   constructor() {
-    // Runs once initially, then again whenever `total` changes.
+    // Runs once initially, then once per flush in which a signal it reads changed.
     effect(() => {
       this.totalHistory.push(this.total());
     });

@@ -15,7 +15,10 @@ import { Pipe, PipeTransform } from '@angular/core';
  */
 @Pipe({ name: 'truncate' })
 export class TruncatePipe implements PipeTransform {
-  transform(value: string, limit = 10, trail = '…'): string {
+  transform(value: string | null | undefined, limit = 10, trail = '…'): string {
+    // Real-world data (HTTP responses, async state) is often null/undefined even when the
+    // static type says otherwise — guard like the built-in pipes do instead of throwing.
+    if (value == null) return '';
     if (value.length <= limit) return value;
     return value.slice(0, limit).trimEnd() + trail;
   }

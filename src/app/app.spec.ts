@@ -1,5 +1,7 @@
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { App } from './app';
+import { RouterOutlet } from '@angular/router';
 
 describe('App', () => {
   beforeEach(async () => {
@@ -8,10 +10,12 @@ describe('App', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('creates an App instance and mounts a router outlet', async () => {
     const fixture = TestBed.createComponent(App);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    await fixture.whenStable();
+    expect(fixture.componentInstance).toBeInstanceOf(App);
+    // The shell hosts routed views — assert the outlet directive is actually present.
+    expect(fixture.debugElement.query(By.directive(RouterOutlet))).not.toBeNull();
   });
 
   it('should render title', async () => {

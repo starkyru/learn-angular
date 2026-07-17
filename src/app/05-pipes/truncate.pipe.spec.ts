@@ -22,6 +22,11 @@ describe('TruncatePipe', () => {
     it('honours a custom trailing marker', () => {
       expect(pipe.transform('abcdef', 3, '...')).toBe('abc...');
     });
+
+    it('returns "" for null/undefined instead of throwing', () => {
+      expect(pipe.transform(null)).toBe('');
+      expect(pipe.transform(undefined, 5)).toBe('');
+    });
   });
 
   // Also verify it works bound in a template.

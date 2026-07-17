@@ -32,6 +32,7 @@ describe('RatingComponent', () => {
       up: el.querySelector('.up') as HTMLButtonElement,
       down: el.querySelector('.down') as HTMLButtonElement,
       label: () => el.querySelector('.label')!.textContent?.trim(),
+      full: () => el.querySelector('.full')!.textContent?.trim(),
     };
   }
 
@@ -62,5 +63,14 @@ describe('RatingComponent', () => {
     up.click(); // clamped
     await fixture.whenStable();
     expect(host.score()).toBe(3);
+  });
+
+  it('computed full() reflects whether stars reached max', async () => {
+    const { fixture, up, full } = await setup();
+    expect(full()).toBe('room to grow'); // 1/3
+    up.click(); // 2
+    up.click(); // 3 == max
+    await fixture.whenStable();
+    expect(full()).toBe('maxed');
   });
 });

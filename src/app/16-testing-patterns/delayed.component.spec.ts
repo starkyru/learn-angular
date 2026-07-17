@@ -4,7 +4,10 @@ import { DelayedComponent, NotifierService } from './delayed.component';
 
 /**
  * Zoneless note: `fakeAsync`/`tick` require zone.js, which this workspace does not use.
- * The zoneless-friendly equivalent is Jest's fake timers + `await fixture.whenStable()`.
+ * The zoneless-friendly equivalent is Jest's fake timers + synchronous `detectChanges()`.
+ * Do NOT combine fake timers with `await whenStable()`: fake timers freeze the timer the
+ * zoneless scheduler uses to settle, so `whenStable()` never resolves (the test hangs).
+ * Drive CD by hand with `detectChanges()` after `advanceTimersByTime(...)` instead.
  */
 describe('DelayedComponent', () => {
   let notifier: NotifierService;
