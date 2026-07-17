@@ -67,14 +67,20 @@ matching assertion — the fastest way to make the concept stick).
 | 11 | [reactive-forms](src/app/11-reactive-forms) | typed `FormGroup`, validators, custom validators |
 | 12 | [routing-guards](src/app/12-routing-guards) | routes, params, lazy loading, functional guards |
 
-### Roadmap (next lessons — great as your own exercises)
+### Internals & testing
 | # | Lesson | Concepts |
 | --- | --- | --- |
-| 13 | lifecycle | `ngOnInit` / `ngOnDestroy` / `ngOnChanges`, `afterNextRender`, `DestroyRef` |
-| 14 | change-detection | OnPush deep-dive, zoneless vs zone.js, `markForCheck`, `signal` interplay |
-| 15 | content-projection | `<ng-content>`, `ng-template`, `TemplateRef` / `ViewContainerRef` |
-| 16 | testing-patterns | spies, `fakeAsync`/`tick`, component harnesses, `viewChild()` |
+| 13 | [lifecycle](src/app/13-lifecycle) | `ngOnChanges`/`ngOnInit`/`ngOnDestroy` order, `DestroyRef` |
+| 14 | [change-detection](src/app/14-change-detection) | OnPush, zoneless vs zone.js, `markForCheck`, signal interplay |
+| 15 | [content-projection](src/app/15-content-projection) | `<ng-content>` slots, fallback, `ng-template`/`ngTemplateOutlet` |
+| 16 | [testing-patterns](src/app/16-testing-patterns) | `TestBed`, `By.css`, spies, Jest fake timers (zoneless) |
+
+### Roadmap (next — great as your own exercises)
+| # | Lesson | Concepts |
+| --- | --- | --- |
+| 17 | view-queries | `viewChild()` / `contentChild()`, `ViewContainerRef`, dynamic components |
+| 18 | state-store | signal-based store service, `linkedSignal`, `resource()` |
 
 ## Status
 
-12 lessons, 49 passing specs. Run `npm test` to verify.
+16 lessons, 60 passing specs. Run `npm test` to verify.
