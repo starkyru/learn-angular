@@ -1,0 +1,14 @@
+/* TypeScript config for Jest specs. See https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    // CommonJS implies the classic (node10) resolver, which TS 6 flags as deprecated.
+    // It still works; silence the forward-compat warning per https://aka.ms/ts6.
+    "ignoreDeprecations": "6.0",
+    "types": ["jest", "node"]
+  },
+  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
+}
