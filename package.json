@@ -9,6 +9,11 @@
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:exercises": "jest exercises.spec",
+    "test:exercises:watch": "jest --watch exercises.spec",
+    "exercises:on": "node scripts/exercises.mjs on",
+    "exercises:off": "node scripts/exercises.mjs off",
+    "exercises:status": "node scripts/exercises.mjs status",
     "typecheck": "tsc -p tsconfig.spec.json --noEmit"
   },
   "private": true,

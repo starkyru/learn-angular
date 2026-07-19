@@ -36,10 +36,33 @@ Every folder under `src/app/NN-topic/` contains:
 
 - **`*.ts`** — the concept implemented in idiomatic, commented Angular (the thing to study).
 - **`*.spec.ts`** — a TestBed spec that *exercises the real code* and shows how to test it.
+- **`exercises.spec.ts`** — a **failing** spec per README exercise (see below).
 - **`README.md`** — the concept, an **Interview Q&A** section, and **Exercises** to extend it.
 
 Study the source, run the spec, then do the exercises (they tell you to add behaviour and a
 matching assertion — the fastest way to make the concept stick).
+
+## Verify your exercises (TDD)
+
+Each lesson ships an `exercises.spec.ts` — one test per README exercise. A test is **red**
+until you implement the exercise and **green** once you finish, so the suite tells you exactly
+what's left. Open-ended exercises appear as `it.todo` (no single right answer).
+
+```bash
+npm run exercises:off             # disable every exercise spec → clean green baseline
+npm run exercises:on -- 08        # enable just lesson 08's exercises → red drivers appear
+npm run test:exercises -- 08      # run one lesson's exercises (red = work left)
+npm run test:exercises:watch      # watch mode: red → green as you code
+npm run exercises:status          # show which lessons are on/off
+```
+
+Typical loop: `exercises:off` to start from green, `exercises:on -- NN` when you begin a
+lesson, then code until `test:exercises -- NN` is green. (`off` renames the spec to an inert
+`.off` file that Jest, `tsc`, and the editor all ignore — nothing runs it until you turn it
+back `on`.)
+
+> To confirm any test genuinely guards your code, break the code on purpose and watch it go
+> red — a test that stays green when the behaviour is wrong is proving nothing.
 
 ## Curriculum
 
@@ -86,4 +109,5 @@ matching assertion — the fastest way to make the concept stick).
 
 ## Status
 
-18 lessons, 65 passing specs. Run `npm test` to verify.
+18 lessons, 65 passing lesson specs (`npm test`), plus a per-lesson `exercises.spec.ts`
+TDD suite (`npm run test:exercises`) whose failing tests are the exercises left to do.
