@@ -31,6 +31,13 @@ binds a **template** (view) to **class state/behaviour** (logic).
 2. Add a `whisper()` that decrements but never goes below `0`.
 3. Change `name` and prove `greet()` and the rendered `.greeting` both update.
 
+## Docs
+
+- [Anatomy of a component](https://angular.dev/guide/components)
+- [Component selectors](https://angular.dev/guide/components/selectors)
+- [Angular Signals](https://angular.dev/guide/signals)
+- [Skipping component subtrees (OnPush)](https://angular.dev/best-practices/skipping-subtrees)
+
 ## Run
 
 ```bash

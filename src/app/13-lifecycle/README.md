@@ -42,6 +42,12 @@ constructor → ngOnChanges → ngOnInit → ngDoCheck
 3. Start an interval in `ngOnInit`, clear it via `DestroyRef.onDestroy`, and assert no ticks
    after destroy (jest fake timers).
 
+## Docs
+
+- [Component lifecycle](https://angular.dev/guide/components/lifecycle)
+- [`DestroyRef` (API)](https://angular.dev/api/core/DestroyRef)
+- [`afterNextRender` (API)](https://angular.dev/api/core/afterNextRender)
+
 ## Run
 
 ```bash

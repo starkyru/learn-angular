@@ -38,6 +38,12 @@ view update?" bugs.
    `reattach()`.
 3. Add an `@Input()` object and demonstrate the mutate-vs-replace reference trap.
 
+## Docs
+
+- [Skipping component subtrees (OnPush)](https://angular.dev/best-practices/skipping-subtrees)
+- [Runtime performance optimization](https://angular.dev/best-practices/runtime-performance)
+- [Angular without ZoneJS (Zoneless)](https://angular.dev/guide/zoneless)
+
 ## Run
 
 ```bash

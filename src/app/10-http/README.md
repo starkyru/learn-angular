@@ -34,6 +34,14 @@ with DI, interceptors, and typed responses.
 2. Add `catchError` mapping 404 → `null` and test it.
 3. Add a logging interceptor and assert order when composed with `authInterceptor`.
 
+## Docs
+
+- [Understanding HTTP (overview)](https://angular.dev/guide/http)
+- [Setting up `HttpClient`](https://angular.dev/guide/http/setup)
+- [Making HTTP requests](https://angular.dev/guide/http/making-requests)
+- [Interceptors](https://angular.dev/guide/http/interceptors)
+- [Test requests](https://angular.dev/guide/http/testing)
+
 ## Run
 
 ```bash

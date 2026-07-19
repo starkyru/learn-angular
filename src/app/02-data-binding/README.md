@@ -32,6 +32,12 @@ How class state and the DOM stay in sync. Direction is the key mental model.
 2. Add `[attr.aria-live]="'polite'"` to `.count` and assert it via `getAttribute`.
 3. Add a `double()` button using `count.update(n => n * 2)`.
 
+## Docs
+
+- [Binding dynamic text, properties and attributes](https://angular.dev/guide/templates/binding)
+- [Adding event listeners](https://angular.dev/guide/templates/event-listeners)
+- [Two-way binding](https://angular.dev/guide/templates/two-way-binding)
+
 ## Run
 
 ```bash

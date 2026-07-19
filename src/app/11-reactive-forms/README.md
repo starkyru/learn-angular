@@ -36,6 +36,13 @@ are explicit, synchronous, and trivially unit-testable.
 2. Add an async username-availability validator (returns an Observable).
 3. Subscribe to `form.controls.age.valueChanges` and assert emissions.
 
+## Docs
+
+- [Forms in Angular (overview)](https://angular.dev/guide/forms)
+- [Reactive forms](https://angular.dev/guide/forms/reactive-forms)
+- [Validating form input](https://angular.dev/guide/forms/form-validation)
+- [Typed forms](https://angular.dev/guide/forms/typed-forms)
+
 ## Run
 
 ```bash

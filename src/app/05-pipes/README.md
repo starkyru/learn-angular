@@ -30,6 +30,10 @@ A pipe transforms a value in the template: `{{ value | pipeName:arg1:arg2 }}`.
    vs replace), then fix it by replacing the array reference.
 3. Chain `truncate` with the built-in `uppercase` pipe in a host template.
 
+## Docs
+
+- [Pipes](https://angular.dev/guide/templates/pipes)
+
 ## Run
 
 ```bash

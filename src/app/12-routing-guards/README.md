@@ -34,6 +34,14 @@ with guards.
 2. Add a `ResolveFn<User>` that pre-loads a user and assert it via `runInInjectionContext`.
 3. Wire two lazy routes with `loadComponent` and a `CanMatch` that toggles between them.
 
+## Docs
+
+- [Angular Routing (overview)](https://angular.dev/guide/routing)
+- [Define routes](https://angular.dev/guide/routing/define-routes)
+- [Read route state](https://angular.dev/guide/routing/read-route-state)
+- [Control route access with guards](https://angular.dev/guide/routing/route-guards)
+- [Other common routing tasks (lazy loading)](https://angular.dev/guide/routing/common-router-tasks)
+
 ## Run
 
 ```bash

@@ -37,6 +37,12 @@ How components talk. Data flows **down** via inputs; events flow **up** via outp
 3. Convert `label`/`max` to the legacy `@Input()` decorator form and note what breaks in the
    template usage (nothing) vs the class usage (`label` is a value, not a function).
 
+## Docs
+
+- [Accepting data with input properties](https://angular.dev/guide/components/inputs)
+- [Custom events with outputs](https://angular.dev/guide/components/outputs)
+- [Two-way binding (`model()`)](https://angular.dev/guide/templates/two-way-binding)
+
 ## Run
 
 ```bash

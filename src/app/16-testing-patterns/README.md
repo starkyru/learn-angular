@@ -38,6 +38,13 @@ The toolkit that recurs across every lesson's specs, gathered in one place.
 2. Use `triggerEventHandler('click', {})` instead of `nativeElement.click()`.
 3. Add a debounced input using `setTimeout` and test it with fake timers.
 
+## Docs
+
+- [Testing (overview)](https://angular.dev/guide/testing)
+- [Basics of testing components](https://angular.dev/guide/testing/components-basics)
+- [Test requests (`HttpTestingController`)](https://angular.dev/guide/http/testing)
+- [Component harnesses overview](https://angular.dev/guide/testing/component-harnesses-overview)
+
 ## Run
 
 ```bash

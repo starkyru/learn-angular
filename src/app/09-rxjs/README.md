@@ -37,6 +37,11 @@ reactive form `valueChanges`) are Observables, so RxJS fluency is core interview
 2. Add a `results$` that `switchMap`s a term into a fake async lookup.
 3. Bridge `terms$` to a signal with `toSignal` and read it synchronously.
 
+## Docs
+
+- [RxJS interop with Angular signals](https://angular.dev/ecosystem/rxjs-interop)
+- [RxJS official docs](https://rxjs.dev)
+
 ## Run
 
 ```bash

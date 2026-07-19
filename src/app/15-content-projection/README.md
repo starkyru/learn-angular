@@ -36,6 +36,12 @@ the parent — Angular's equivalent of `children`/slots.
 2. Build a `<app-list [items]>` that projects a `<ng-template let-item>` via `ngTemplateOutlet`.
 3. Query a projected element with `contentChild()` and read it in `ngAfterContentInit`.
 
+## Docs
+
+- [Content projection with `ng-content`](https://angular.dev/guide/components/content-projection)
+- [`NgTemplateOutlet` (API)](https://angular.dev/api/common/NgTemplateOutlet)
+- [Programmatically rendering components](https://angular.dev/guide/components/programmatic-rendering)
+
 ## Run
 
 ```bash

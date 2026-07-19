@@ -36,6 +36,13 @@ hand them to whoever asks. DI is Angular's backbone (HttpClient, Router, forms a
 2. Swap the service for a fake with `{ provide: GreetingService, useClass: FakeGreeting }`.
 3. Add a `useFactory` provider for `GREETING_CONFIG` that depends on another token.
 
+## Docs
+
+- [Dependency injection in Angular](https://angular.dev/guide/di)
+- [Defining dependency providers](https://angular.dev/guide/di/defining-dependency-providers)
+- [Hierarchical injectors](https://angular.dev/guide/di/hierarchical-dependency-injection)
+- [Injection context](https://angular.dev/guide/di/dependency-injection-context)
+
 ## Run
 
 ```bash

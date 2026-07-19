@@ -9,3 +9,9 @@
 
 1. Add `contentChild()` to the card from lesson 15 and read the projected title.
 2. Keep the `ComponentRef` returned from `createComponent()` and destroy it from a button.
+
+## Docs
+
+- [Referencing component children with queries](https://angular.dev/guide/components/queries)
+- [Programmatically rendering components](https://angular.dev/guide/components/programmatic-rendering)
+- [`ViewContainerRef` (API)](https://angular.dev/api/core/ViewContainerRef)

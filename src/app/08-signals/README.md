@@ -36,6 +36,12 @@ Angular's reactive primitive and the engine behind zoneless change detection.
 2. Use `linkedSignal` to track a "selected price" that defaults to the last added price.
 3. Replace the `effect` history with `toSignal(toObservable(total).pipe(...))` and compare.
 
+## Docs
+
+- [Angular Signals](https://angular.dev/guide/signals)
+- [Dependent state with `linkedSignal`](https://angular.dev/guide/signals/linked-signal)
+- [RxJS interop (`toSignal` / `toObservable`)](https://angular.dev/ecosystem/rxjs-interop)
+
 ## Run
 
 ```bash

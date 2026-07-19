@@ -12,3 +12,9 @@
 1. Add a quantity to `CartItem` and derive a quantity-aware total.
 2. Render `selectedDetails.status()` in a component and add loading/error UI.
 3. Replace the mock loader with a typed `HttpClient` request.
+
+## Docs
+
+- [Angular Signals](https://angular.dev/guide/signals)
+- [Dependent state with `linkedSignal`](https://angular.dev/guide/signals/linked-signal)
+- [Async reactivity with resources](https://angular.dev/guide/signals/resource)

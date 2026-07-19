@@ -30,6 +30,10 @@ Conditionals and loops in the template, using the block syntax that replaced
 3. Change `track todo.id` to `track $index`, add a todo at the *front*, and observe the spec
    still passing but understand why `id` is the safer key.
 
+## Docs
+
+- [Control flow (`@if` / `@for` / `@switch`)](https://angular.dev/guide/templates/control-flow)
+
 ## Run
 
 ```bash

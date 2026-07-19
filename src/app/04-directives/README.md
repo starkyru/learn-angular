@@ -33,6 +33,11 @@ A directive adds behaviour to an element. Three kinds:
 2. Rewrite the DOM writes using `Renderer2.setStyle` and keep the spec green.
 3. Add a `[attr.data-active]` host binding reflecting `active()` and assert it.
 
+## Docs
+
+- [Built-in directives (overview)](https://angular.dev/guide/directives)
+- [Attribute directives](https://angular.dev/guide/directives/attribute-directives)
+
 ## Run
 
 ```bash
