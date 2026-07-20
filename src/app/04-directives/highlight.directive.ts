@@ -21,6 +21,7 @@ import { Directive, ElementRef, inject, input, signal } from '@angular/core';
     '(mouseenter)': 'onEnter()',
     '(mouseleave)': 'onLeave()',
     '[class.highlighted]': 'active()',
+    '[attr.data-active]': 'active()',
   },
 })
 export class HighlightDirective {
